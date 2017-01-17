@@ -31,10 +31,10 @@ public class HelloWorldTaskLet implements Tasklet {
 	@Override
 	public RepeatStatus execute(StepContribution arg0, ChunkContext chunk) throws Exception {
 		System.out.println("Welcome to Spring Batch  in " + environment + "  environment on " + rundate);
-		JobParameters params = chunk.getStepContext().getStepExecution().getJobExecution().getJobParameters();
-		
-		System.out.println(chunk.getStepContext().getStepExecution().getJobExecution().getJobInstance());
-		System.out.println(params);
+//		JobParameters params = chunk.getStepContext().getStepExecution().getJobExecution().getJobParameters();
+//		
+//		System.out.println(chunk.getStepContext().getStepExecution().getJobExecution().getJobInstance());
+//		System.out.println(params);
 		return RepeatStatus.FINISHED;
 	}
 

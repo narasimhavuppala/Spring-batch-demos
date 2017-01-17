@@ -21,11 +21,11 @@ public class TestHelloWorld {
 			JobInstanceAlreadyCompleteException, JobParametersInvalidException {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("app-hellow-world.xml");
-		System.out.println(context);
+		
 		JobLauncher launcher = context.getBean(JobLauncher.class);
-
 		Job job = context.getBean(Job.class);
-		System.out.println(job);
+		
+		
 		JobParametersBuilder builder = new JobParametersBuilder();
 		builder.addString("environment", "DEV");
 		builder.addDate("runDate", Calendar.getInstance().getTime());
