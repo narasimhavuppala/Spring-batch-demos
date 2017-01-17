@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<batch:job id="importProducts">
+		<batch:step id="hellowWorld" next="test">
+			<batch:tasklet ref="hwTaskLet"></batch:tasklet>
+		</batch:step>
+		<batch:step id="test">
+			<batch:tasklet ref="hwTaskLet"></batch:tasklet>
+		</batch:step>
+		
+
+	</batch:job>
+
+	<bean id="hwTaskLet" class="com.batch.demo.HelloWorldTaskLet"
+		scope="step">
+		<property name="environment" value="#{jobParameters['environment']}"></property>
+		<property name="rundate" value="#{jobParameters['runDate']}"></property>
+	</bean>
+	<bean id="jobLauncher"
+		class="org.springframework.batch.core.launch.support.CommandLineJobRunner">
+		<property name="jobRepository" ref="jobRepository" />
+		
+	</bean>
+
+	<bean id="jobRepository"
+		class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
+		<property name="dataSource" ref="ds"></property>
+		<property name="transactionManager" ref="transactionManager" />
+
+	</bean>
+
+	<bean id="ds"
+		class="org.springframework.jdbc.datasource.SingleConnectionDataSource">
+		<property name="url" value="jdbc:mysql://localhost:3306/world"></property>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="MYSQL"></property>
+
+
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
+		
+
+</beans>
