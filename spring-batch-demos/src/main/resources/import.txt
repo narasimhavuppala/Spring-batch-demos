@@ -1,3 +1,0 @@
-id name age salary
-1,Narasimha Vuppala,25,34500
-2,Shreemaan,4,0
