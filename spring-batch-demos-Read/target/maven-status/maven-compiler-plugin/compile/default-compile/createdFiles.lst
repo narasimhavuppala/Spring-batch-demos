@@ -1,0 +1,7 @@
+com\batch\demo\file\DummyProductItemWriter.class
+com\batch\demo\model\Product.class
+com\demo\test\TestBatch.class
+com\batch\demo\model\BookProduct.class
+com\batch\demo\model\MobilePhoneProduct.class
+com\batch\demo\file\ProductFieldSetMapper.class
+com\batch\demo\HelloWorldTaskLet.class
