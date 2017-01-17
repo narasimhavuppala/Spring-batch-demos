@@ -3,13 +3,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:batch="http://www.springframework.org/schema/batch"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
-	<batch:job id="importProducts">
+	
+	<batch:job id="HelloWorld">
 		<batch:step id="hellowWorld">
 			<batch:tasklet ref="hwTaskLet"></batch:tasklet>
 		</batch:step>
 	</batch:job>
 
 	<bean id="hwTaskLet" class="com.batch.demo.HelloWorldTaskLet"></bean>
+	
+	
+	
 	<bean id="jobLauncher"
 		class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
 		<property name="jobRepository" ref="jobRepository" />

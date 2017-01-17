@@ -17,11 +17,13 @@ public class TestHelloWorld {
 	public static void main(String[] args) throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("app-hellow-world.xml");
-		System.out.println(context);
+		
+		
 		JobLauncher launcher = context.getBean(JobLauncher.class);
-
 		Job job = context.getBean(Job.class);
-		System.out.println(job);
+		
+		
+		
 		launcher.run(job, new JobParameters());
 	}
 

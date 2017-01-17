@@ -8,23 +8,22 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<batch:job id="importProducts">
-		<batch:step id="hellowWorld" next="test">
+		<batch:step id="hellowWorld">
 			<batch:tasklet ref="hwTaskLet"></batch:tasklet>
 		</batch:step>
-		<batch:step id="test">
-			<batch:tasklet ref="hwTaskLet"></batch:tasklet>
-		</batch:step>
+<!-- 		<batch:step id="test"> -->
+<!-- 			<batch:tasklet ref="hwTaskLet"></batch:tasklet> -->
+<!-- 		</batch:step> -->
 		
 
 	</batch:job>
 
-	<bean id="hwTaskLet" class="com.batch.demo.HelloWorldTaskLet"
-		scope="step">
+	<bean id="hwTaskLet" class="com.batch.demo.HelloWorldTaskLet"  scope="step">
 		<property name="environment" value="#{jobParameters['environment']}"></property>
 		<property name="rundate" value="#{jobParameters['runDate']}"></property>
 	</bean>
 	<bean id="jobLauncher"
-		class="org.springframework.batch.core.launch.support.CommandLineJobRunner">
+		class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
 		<property name="jobRepository" ref="jobRepository" />
 		
 	</bean>
