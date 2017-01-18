@@ -8,10 +8,6 @@ import org.springframework.batch.item.file.transform.FieldSet;
 
 import com.batch.demo.model.Product;
 
-/**
- * @author templth
- *
- */
 public class ProductFieldSetMapper implements FieldSetMapper<Product> {
 	public Product mapFieldSet(FieldSet fieldSet) {
 		Product product = new Product();
