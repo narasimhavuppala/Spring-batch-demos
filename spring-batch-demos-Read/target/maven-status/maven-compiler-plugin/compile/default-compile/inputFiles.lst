@@ -1,7 +1,7 @@
-F:\workspace\spring-batch-demos-Read\src\main\java\com\batch\demo\model\BookProduct.java
-F:\workspace\spring-batch-demos-Read\src\main\java\com\batch\demo\file\DummyProductItemWriter.java
-F:\workspace\spring-batch-demos-Read\src\main\java\com\batch\demo\model\MobilePhoneProduct.java
-F:\workspace\spring-batch-demos-Read\src\main\java\com\batch\demo\model\Product.java
-F:\workspace\spring-batch-demos-Read\src\main\java\com\batch\demo\HelloWorldTaskLet.java
-F:\workspace\spring-batch-demos-Read\src\main\java\com\demo\test\TestBatch.java
-F:\workspace\spring-batch-demos-Read\src\main\java\com\batch\demo\file\ProductFieldSetMapper.java
+C:\Users\Shree\git\Spring-batch-demos\spring-batch-demos-Read\src\main\java\com\batch\demo\HelloWorldTaskLet.java
+C:\Users\Shree\git\Spring-batch-demos\spring-batch-demos-Read\src\main\java\com\batch\demo\file\ProductItemWriter.java
+C:\Users\Shree\git\Spring-batch-demos\spring-batch-demos-Read\src\main\java\com\batch\demo\file\myItemReader.java
+C:\Users\Shree\git\Spring-batch-demos\spring-batch-demos-Read\src\main\java\com\demo\test\TestBatch.java
+C:\Users\Shree\git\Spring-batch-demos\spring-batch-demos-Read\src\main\java\com\batch\demo\file\ProductFieldSetMapper.java
+C:\Users\Shree\git\Spring-batch-demos\spring-batch-demos-Read\src\main\java\com\batch\demo\file\ProductItemProcessor.java
+C:\Users\Shree\git\Spring-batch-demos\spring-batch-demos-Read\src\main\java\com\batch\demo\model\Product.java
